@@ -71,6 +71,13 @@ body {
     transform: translateY(0);
     opacity: 1; } }
 
+/* rotate-animatio */
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg); }
+  to {
+    transform: rotateZ(360deg); } }
+
 body {
   font-size: 1.6rem;
   font-weight: 400;
@@ -848,3 +855,25 @@ body {
     @media screen and (max-width: 75em) {
       .join__form {
         width: 100%; } }
+
+.comming-soon {
+  min-height: 90vh;
+  background: linear-gradient(to bottom right, rgba(86, 59, 71, 0.3), rgba(151, 124, 142, 0.2)), url("../img/comming-soon.jpg");
+  background-size: cover;
+  background-position: center; }
+  .comming-soon__container {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .comming-soon__container svg #needle {
+      transform: translateY(-3px);
+      transform-box: fill-box;
+      animation: rotate 1.5s infinite linear; }
+  .comming-soon__header {
+    font-size: 6rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0.5rem 1rem 3rem #000;
+    margin-right: 5rem; }
