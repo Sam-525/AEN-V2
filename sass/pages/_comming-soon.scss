@@ -16,10 +16,17 @@
     justify-content: center;
     align-items: center;
 
-    & svg #needle {
-      transform: translateY(-3px);
-      transform-box: fill-box;
-      animation: rotate 1.5s infinite linear;
+    & svg {
+      @include respond(phone) {
+        width: 14rem;
+        margin-right: 2rem;
+      }
+
+      & #needle {
+        transform: translateY(-3px);
+        transform-box: fill-box;
+        animation: rotate 1.5s infinite linear;
+      }
     }
   }
 
@@ -29,5 +36,11 @@
     text-transform: uppercase;
     text-shadow: 0.5rem 1rem 3rem $color-black;
     margin-right: 5rem;
+
+    @include respond(phone) {
+      text-align: center;
+      font-size: 5rem;
+      margin-right: 2rem;
+    }
   }
 }
